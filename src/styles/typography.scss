@@ -1,0 +1,113 @@
+@import '@styles/vars.scss';
+@import '@styles/mixins/_mixins';
+html,
+body,
+button,
+input {
+  font-family: 'bt_curve_regular', 'bt_curve_headline', 'Calibri', 'Arial',
+    sans-serif;
+}
+h1,
+.h1 {
+  @include px-to-rem(font-size, 60);
+  @include px-to-rem(line-height, 66);
+}
+h2,
+.h2 {
+  @include px-to-rem(font-size, 40);
+  @include px-to-rem(line-height, 48);
+}
+h3,
+.h3 {
+  @include px-to-rem(font-size, 36);
+  @include px-to-rem(line-height, 42);
+}
+h4,
+.h4 {
+  @include px-to-rem(font-size, 28);
+  @include px-to-rem(line-height, 36);
+}
+h5,
+.h5 {
+  @include px-to-rem(font-size, 20);
+  @include px-to-rem(line-height, 24);
+}
+
+.heading1 {
+  @include px-to-rem(font-size, 32);
+  @include px-to-rem(line-height, 40);
+}
+p,
+input,
+textarea,
+button {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+@media (min-width: $bp-medium) {
+  h1,
+  .h1 {
+    @include px-to-rem(font-size, 75);
+    @include px-to-rem(line-height, 82);
+  }
+  h2,
+  .h2 {
+    @include px-to-rem(font-size, 52);
+    @include px-to-rem(line-height, 62);
+  }
+  h3,
+  .h3 {
+    @include px-to-rem(font-size, 39);
+    @include px-to-rem(line-height, 46);
+  }
+  h4,
+  .h4 {
+    @include px-to-rem(font-size, 32);
+    @include px-to-rem(line-height, 42);
+  }
+  h5,
+  .h5 {
+    @include px-to-rem(font-size, 20);
+    @include px-to-rem(line-height, 24);
+  }
+}
+@media (min-width: $bp-largest) {
+  p,
+  .p {
+    @include px-to-rem(font-size, 20);
+    @include px-to-rem(line-height, 30);
+  }
+  h1,
+  .h1 {
+    @include px-to-rem(font-size, 90);
+    @include px-to-rem(line-height, 100);
+  }
+  h2,
+  .h2 {
+    @include px-to-rem(font-size, 64);
+    @include px-to-rem(line-height, 76);
+  }
+  h3,
+  .h3 {
+    @include px-to-rem(font-size, 42);
+    @include px-to-rem(line-height, 50);
+  }
+  h4,
+  .h4 {
+    @include px-to-rem(font-size, 36);
+    @include px-to-rem(line-height, 48);
+  }
+  h5,
+  .h5 {
+    @include px-to-rem(font-size, 20);
+    @include px-to-rem(line-height, 24);
+  }
+  .heading1 {
+    @include px-to-rem(font-size, 56);
+    @include px-to-rem(line-height, 64);
+  }
+  .heading2 {
+    @include px-to-rem(font-size, 42);
+    @include px-to-rem(line-height, 50);
+  }
+}
