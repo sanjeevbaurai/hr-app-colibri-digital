@@ -1,0 +1,87 @@
+// COLOR VARIABLES
+$color-primary: #5514b4;
+$color-primary-hover: #540e85;
+$color-primary-purchase: #e60050;
+$color-primary-purchase-hover: #c30d4c;
+$color-secondary-bg: #f7f2fb;
+$color-secondary-purchase-bg: #fef2f6;
+$color-bt-indigo: #5514b4;
+$color-bt-pink: #ff6eff;
+$color-bt-dull-pink: #f200f5;
+$color-bt-light-pink: #ff80ff;
+$color-bt-curve-pink: #ff6eff;
+$color-bt-halo-purple: #28045c;
+$color-light-purple: #9e81cc;
+$color-lighter-purple: #eee8f7;
+$color-lilla: #ede8f6;
+$color-bt-blue: #00a0d6;
+$color-white: #fff;
+$color-black: #000000;
+$color-lightred: #ffeeea;
+$color-darkgrey: #333;
+$color-grey: #666;
+$color-mediumgrey: #999;
+$color-lightgrey: #ddd;
+$color-lightmediumgrey: #ebebeb;
+$color-lightergrey: #eee;
+$color-lightestgrey: #fafafa;
+$color-warning: #e60014;
+$color-success: #008a00;
+$color-alert: #ffdc00;
+
+// FONTS
+$font-regular: bt_curve_regular, system-ui, -apple-system, Segoe UI, Roboto,
+  Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple colour Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto colour Emoji';
+$font-bold: bt_curve_bold, $font-regular;
+$font-condensed: bt_curve_condensed, $font-regular;
+$font-headline: bt_curve_headline, $font-regular;
+$font-bt-icon: bt_icons, $font-regular;
+$font-bt: bt_font, $font-regular;
+$root-font-size: 16px;
+
+// BREAKPOINTS
+$bp-xxlarge: 100em; // 1600px
+$bp-extralarge: 87.5em; // 1400px
+$bp-largest: 75em; // 1200px
+$bp-large: 60em; // 960px
+$bp-medium: 48em; // 768px
+$bp-small: 37.5em; // 600px
+$bp-smaller: 30em; // 480px
+$bp-smallest: 20em; // 320px
+
+// BORDER
+$border-light: 0.063rem solid $color-lightgrey;
+$border-medium: 0.063rem solid $color-grey;
+
+// GENERIC MARGINS
+/*
+  (!) This value below is used as a single value in some components.
+
+  If changed to a multi value, update as per example below:
+
+  Example: $pageMargin: 2rem 3rem;
+  - Define a new variable, $pageMarginHorizontal: 3rem;
+  - Change usage from $pageMargin to $pageMarginHorizontal,
+    wherever we need a single value,
+    per example in loading.module.scss: (left: -$pageMargin);
+*/
+$pageMargin: 3rem;
+
+// MIXINS
+@mixin bgPurpleGradient($degrees) {
+  background: linear-gradient(
+    $degrees,
+    #aa40e3 7.77%,
+    #681cc4 41.6%,
+    #4e11ad 89.49%
+  );
+}
+
+// EXTENDABLES
+%contained {
+  width: 100%;
+  max-width: 55rem;
+  margin: 2.3rem auto;
+}

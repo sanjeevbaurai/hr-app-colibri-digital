@@ -1,0 +1,12 @@
+@import '@styles/vars.scss';
+
+.page {
+  // Let's have padding in components independently. This will help us create fluid layouts.
+
+  position: relative;
+  padding: 0 1rem;
+
+  @media screen and (min-width: $bp-medium) {
+    padding: 0 1.5rem;
+  }
+}

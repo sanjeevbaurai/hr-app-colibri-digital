@@ -1,0 +1,331 @@
+@import '@styles/vars.scss';
+@import '@styles/reset.scss';
+@import '@styles/fonts.scss';
+@import '@styles/global.scss';
+@import '@styles/typography.scss';
+@import '@styles/mixins/_mixins';
+/*
+  General styles
+*/
+html,
+body {
+  font-family: $font-regular;
+  font-size: $root-font-size;
+  color: $color-darkgrey;
+  overflow-x: hidden;
+}
+button,
+a.button {
+  border-radius: 0.313rem;
+  padding: 0.563rem 1.25rem;
+  // border: 0.063rem solid transparent;
+
+  border-width: 0.063rem;
+  border-style: solid;
+  display: inline-block;
+
+  cursor: pointer;
+  text-decoration: none;
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+}
+.primary {
+  background: $color-primary;
+  border-color: $color-primary;
+  color: $color-white;
+  &:hover {
+    background: $color-primary-hover;
+    border-color: $color-primary-hover;
+  }
+}
+.secondary {
+  background: $color-white;
+  border-color: $color-primary;
+  color: $color-primary;
+  &:hover {
+    background: $color-secondary-bg;
+    border-color: $color-primary-hover;
+    color: $color-primary-hover;
+  }
+}
+.primary-purchase {
+  background: $color-primary-purchase;
+  border-color: $color-primary-purchase;
+  color: $color-white;
+  &:hover {
+    background: $color-primary-purchase-hover;
+    border-color: $color-primary-purchase-hover;
+  }
+}
+.secondary-purchase {
+  background: $color-white;
+  border-color: $color-primary-purchase;
+  color: $color-primary-purchase;
+  &:hover {
+    background: $color-primary-purchase;
+    border-color: $color-primary-purchase;
+    color: $color-white;
+  }
+}
+.primary-outlined {
+  color: $color-primary;
+  background-color: $color-white;
+  border-color: $color-primary;
+  &:hover,
+  &:focus {
+    border-color: $color-primary;
+    color: $color-white;
+    background-color: $color-primary;
+  }
+}
+.text-primary {
+  color: $color-primary;
+}
+.text-pink {
+  color: $color-bt-pink;
+}
+.text-grey {
+  color: $color-grey;
+}
+.text-primary-purchase {
+  color: $color-primary-purchase;
+}
+.link {
+  background: transparent;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-headline;
+}
+strong {
+  font-family: $font-bold;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &.icon-large:hover {
+    &:after {
+      text-decoration: none;
+    }
+  }
+}
+.icon {
+  position: relative;
+}
+.icon:after {
+  font-family: bt_icons;
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  margin-left: 0.375rem;
+  position: relative;
+  top: 0.125rem;
+}
+.icon-large:after {
+  font-size: 1.5rem;
+}
+.icon-xlarge:after {
+  font-size: 1.15rem;
+}
+.icon-left:after {
+  position: absolute;
+  top: 1rem;
+  left: 0.188rem;
+  margin-left: 0;
+}
+.icon-right:after {
+  position: absolute;
+  top: 1rem;
+  right: 1.438rem;
+  margin-left: 0;
+}
+.arrow-right:after {
+  content: 'm';
+}
+.arrow-up:after {
+  content: '\e803';
+}
+.arrow-down:after {
+  content: '\e80e';
+}
+.underline {
+  text-decoration: underline;
+}
+input[type='text'],
+textarea {
+  border-radius: 0.313rem;
+  border: 0.063rem solid $color-grey;
+  padding: 0.625rem;
+  &:focus {
+    outline: none;
+    border-color: $color-bt-blue;
+  }
+}
+input[type='text'] {
+  height: 2.5rem;
+}
+input,
+label {
+  margin-bottom: 0.625rem;
+}
+.bt-container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.negate-bt-container-padding {
+  margin: 0 -15px;
+}
+//smallest
+.body1 {
+  font-size: 20px;
+  line-height: 28px;
+}
+.body2 {
+  font-size: 16px;
+  line-height: 24px;
+}
+option {
+  border-bottom: '1px solid rgb(238, 238, 238)';
+  padding: '5px 2px';
+  &:hover {
+    background-color: '#00A0D6';
+  }
+  &:checked,
+  active {
+    background-color: '#00A0D6';
+  }
+}
+@media screen and (min-width: $bp-medium) {
+  .icon-xlarge:after {
+    font-size: 2rem;
+  }
+  .icon-left:after {
+    left: 1.438rem;
+  }
+  .icon-left:after {
+    right: 1.438rem;
+  }
+  option {
+    border-bottom: '1px solid #eee';
+    font: 'inherit';
+    padding: '10px 15px';
+    &:hover {
+      background-color: '#00A0D6';
+    }
+    &:checked,
+    active {
+      background-color: '#00A0D6';
+    }
+  }
+  // .bt-container {
+  //   max-width: $bp-medium;
+  //   padding: 0 60px;
+  // }
+  // .negate-bt-container-padding {
+  //   margin: 0 -60px;
+  // }
+  .body1 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .body2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+@media (min-width: $bp-largest) {
+  .bt-container {
+    max-width: $bp-largest;
+    padding: 0 20px;
+  }
+  .negate-bt-container-padding {
+    margin: 0 -20px;
+  }
+  .body1 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .body2 {
+    font-size: 21px;
+    line-height: 32px;
+  }
+}
+/*
+  Utility styles
+*/
+.bold {
+  font-weight: 700;
+}
+.regular {
+  font-weight: 400;
+}
+.light {
+  font-weight: 200;
+}
+.mb-1-5 {
+  margin-bottom: 1.5rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+/*
+  Other global styles
+*/
+.page-content {
+  @extend %contained;
+  &.large {
+    max-width: 60rem;
+  }
+}
+
+.video-js {
+  width: 80vw;
+  height: 0;
+  padding-top: 56.25%;
+}
+
+.active {
+  color: #fff;
+  background-color: #5514b4;
+}
+.inactive {
+  color: #5514b4;
+  background-color: #fff;
+  border: 2px solid $color-bt-indigo;
+}
+.enableSection {
+  background: transparent;
+}
+.disableBtnSection {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media (min-width: $bp-largest) {
+  .video-js {
+    width: 53vw;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+.hideClass {
+  visibility: visible;
+}
